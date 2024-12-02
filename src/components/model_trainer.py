@@ -11,6 +11,10 @@ from src.utils.utils import save_object,evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
 
+from src.components.data_ingestion import DataIngestion
+from src.components.data_transformation import DataTransformation
+
+
 
 @dataclass 
 class ModelTrainerConfig:
@@ -21,7 +25,7 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
     
-    def initate_model_training(self,train_array,test_array):
+    def initiate_model_training(self,train_array,test_array):
         try:
             logging.info('Splitting Dependent and Independent variables from train and test data')
             X_train, y_train, X_test, y_test = (
@@ -67,4 +71,12 @@ class ModelTrainer:
             raise customexception(e,sys)
 
         
+if __name__ == "__main__":
+    obj=DataIngestion()
+    train_data_path,test_data_path=obj.initiate_data_ingestion()
+    data_transformation=DataTransformation()
+    train_arr,test_arr=data_transformation.initiate_data_transformation(train_data_path,test_data_path)
+    model_trainer_obj=ModelTrainer()
+    model_trainer_obj.initiate_model_training(train_arr,test_arr)
+
     
