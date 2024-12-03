@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/mlruns/0/1a837211f0504d2f9ea41c25dac43734/artifacts
+end_time: 1733218128980
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1a837211f0504d2f9ea41c25dac43734
+run_name: luminous-cub-806
+run_uuid: 1a837211f0504d2f9ea41c25dac43734
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733218124676
+status: 3
+tags: []
+user_id: RAKSHANDA
