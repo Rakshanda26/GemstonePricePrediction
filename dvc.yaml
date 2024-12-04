@@ -1,0 +1,16 @@
+stages:
+  training:
+  cmd : D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\pipeline\training_pipeline.py
+  deps:
+  - D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\pipeline\training_pipeline.py
+  - D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\components\data_ingestion.py
+  - D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\components\data_transformation.py
+  - D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\components\model_trainer.py
+  - D:\ML_Project_All\Gemstone-Price-Prediction-End-to-End-Pipeline\src\components\model_evaluation.py
+
+outs:
+- artifacts/raw.csv
+- artifacts/test.csv
+- artifacts/train.csv
+- artifacts/preprocessor.pkl
+- artifacts/model.pkl

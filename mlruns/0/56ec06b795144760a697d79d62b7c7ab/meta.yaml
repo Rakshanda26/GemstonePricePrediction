@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/mlruns/0/56ec06b795144760a697d79d62b7c7ab/artifacts
+end_time: 1733320282112
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 56ec06b795144760a697d79d62b7c7ab
+run_name: thoughtful-crane-576
+run_uuid: 56ec06b795144760a697d79d62b7c7ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733320271535
+status: 3
+tags: []
+user_id: RAKSHANDA

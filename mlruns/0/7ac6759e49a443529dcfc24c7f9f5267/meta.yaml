@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/mlruns/0/7ac6759e49a443529dcfc24c7f9f5267/artifacts
+end_time: 1733320723976
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7ac6759e49a443529dcfc24c7f9f5267
+run_name: orderly-shad-164
+run_uuid: 7ac6759e49a443529dcfc24c7f9f5267
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733320717898
+status: 3
+tags: []
+user_id: RAKSHANDA

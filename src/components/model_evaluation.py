@@ -37,6 +37,7 @@ class ModelEvaluation:
         except Exception as e:
             logging.error("Error occurred while calculating evaluation metrics.")
             raise customexception(e, sys)
+        
 
     def initiate_model_evaluation(self, train_array, test_array):
         """
@@ -71,16 +72,33 @@ class ModelEvaluation:
                 mlflow.log_metric("mae", mae)
                 mlflow.log_metric("r2", r2)
 
+                # Infer the model signature and prepare an input example
+                from mlflow.models.signature import infer_signature
+                signature = infer_signature(X_test, predictions)
+                input_example = X_test[:1]  # A single test example
+
                 # Log the model
                 if tracking_url_type_store != "file":
                     # Log and register the model with MLflow Model Registry
-                    mlflow.sklearn.log_model(model, "model", registered_model_name="ml_model")
+                    mlflow.sklearn.log_model(
+                        model,
+                        "model",
+                        registered_model_name="ml_model",
+                        signature=signature,
+                        input_example=input_example
+                    )
                 else:
                     # Log the model locally
-                    mlflow.sklearn.log_model(model, "model")
+                    mlflow.sklearn.log_model(
+                        model,
+                        "model",
+                        signature=signature,
+                        input_example=input_example
+                    )
                 
                 logging.info("Model evaluation and logging completed successfully.")
 
         except Exception as e:
             logging.error("Error occurred during model evaluation.")
             raise customexception(e, sys)
+    

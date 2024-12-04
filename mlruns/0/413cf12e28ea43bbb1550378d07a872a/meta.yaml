@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/mlruns/0/413cf12e28ea43bbb1550378d07a872a/artifacts
+end_time: 1733320029431
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 413cf12e28ea43bbb1550378d07a872a
+run_name: thundering-croc-310
+run_uuid: 413cf12e28ea43bbb1550378d07a872a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733320014618
+status: 4
+tags: []
+user_id: RAKSHANDA
