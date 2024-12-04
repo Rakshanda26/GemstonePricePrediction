@@ -1,0 +1,49 @@
+schema: '2.0'
+stages:
+  training:
+    cmd: set 
+      PYTHONPATH=%PYTHONPATH%;D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/src
+      && python 
+      D:/ML_Project_All/Gemstone-Price-Prediction-End-to-End-Pipeline/src/pipeline/training_pipeline.py
+    deps:
+    - path: src\components\data_ingestion.py
+      hash: md5
+      md5: 8f782a199f6503c17f90f726db8f6373
+      size: 2180
+    - path: src\components\data_transformation.py
+      hash: md5
+      md5: 234cae3b1f85a3bf8236b403f92146c3
+      size: 4871
+    - path: src\components\model_evaluation.py
+      hash: md5
+      md5: 20709d5453d71d19df6e3feec1d18b3e
+      size: 4031
+    - path: src\components\model_trainer.py
+      hash: md5
+      md5: 2bc6d95695a3047da285b94455d5f217
+      size: 2953
+    - path: src\pipeline\training_pipeline.py
+      hash: md5
+      md5: 1ae395e143bd3b3c1b14c196def4b2bb
+      size: 2540
+    outs:
+    - path: artifacts/model.pkl
+      hash: md5
+      md5: 1869370ff1a206d46dc1c2c435b1398c
+      size: 547
+    - path: artifacts/preprocessor.pkl
+      hash: md5
+      md5: 9057bf1db1c1aae96540cf03d8d11d72
+      size: 3025
+    - path: artifacts/raw.csv
+      hash: md5
+      md5: 4d3b99278017349368e70a85aa43bd7d
+      size: 10656378
+    - path: artifacts/test.csv
+      hash: md5
+      md5: ffcde275c4448e206d99f3ee3cb1a73a
+      size: 2664295
+    - path: artifacts/train.csv
+      hash: md5
+      md5: 7aedfc30ddc0248cce41a02b65237538
+      size: 7992135
